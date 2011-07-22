@@ -27,7 +27,9 @@ class sniffRegisterController extends sniffController {
          );
       $msg   = 'Welcome '.$request->getValue('name') . "\n";
       $msg  .= 'Your Login: '.$request->getValue('username') . "\n";
-      $msg  .= 'Your Password: '.$request->getValue('passwd') . "\n";
+	  
+	  //message should not contain password information
+	  
       $msg  .= "\n\nEnjoy your stay!";
       mail($request->getValue('email'), 'welcome to SNIFF', $msg, 'From: housekeeping@sniff.mobile');
       header('Location: /sniff/home?message=Welcome,%20please%20login!',302);
