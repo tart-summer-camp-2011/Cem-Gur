@@ -24,7 +24,7 @@ class sniffResponse {
 
    public function __get($key) {
       if (!isset($this->data[$key])) {
-         throw new sniffResponseException("Key '$key' does not exist");
+         throw new sniffResponseException("Key does not exist");	//key value should not send in exception message.
       }
       return $this->data[$key];
    }
