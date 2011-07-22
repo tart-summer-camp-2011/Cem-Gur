@@ -42,7 +42,7 @@ class sniffDatabase {
 		}
 		$rc = $this->mysqli->query($sql);
 		if (!$rc) {
-		   throw new Exception($this->mysqli->error, $this->mysqli->errno);
+		   throw new Exception("An error occurred...");	//error message should not contain stack trace information...
 		}
 		return new sniffDatabaseResult($this, $rc);
 	}
