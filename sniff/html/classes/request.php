@@ -32,10 +32,8 @@ class sniffRequest {
       if (isset($this->input[$key])) {
          return $this->input[$key];
       }
-
-      if (isset($this->session[$key])) {
-         return $this->session[$key];
-      }
+	  
+	  //session informations should not be accessible from getValue method.
 
       if (isset($this->params[$key])) {
          return $this->params[$key];
