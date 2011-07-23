@@ -19,8 +19,7 @@ class sniffErrorView implements sniffViewInterface {
    public function render(sniffRequest $request, sniffResponse $response) {
        header('Content-type: text/plain');
        $output = "An Error occoured.\n";
-       $output .= print_r($request, true);
-       $output .= print_r($response, true);
+	   //request, response informations should not be printed.
        return $output;
    }
 
